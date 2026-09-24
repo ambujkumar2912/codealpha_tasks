@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    font-family: "Inter", sans-serif;
+    color: #f8fafc;
+    background: #09090b;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.16), transparent 34%),
+        #09090b;
+}
+
+.calculator {
+    width: min(100%, 390px);
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    background: rgba(24, 24, 27, 0.92);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+}
+
+.display {
+    min-height: 142px;
+    padding: 24px 20px 18px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-radius: 20px;
+    background: #111113;
+    overflow: hidden;
+}
+
+.expression {
+    width: 100%;
+    min-height: 25px;
+    margin-bottom: 8px;
+    color: #71717a;
+    font-size: 15px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.result {
+    width: 100%;
+    color: #fafafa;
+    font-size: clamp(38px, 10vw, 52px);
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    height: 68px;
+    border: 0;
+    border-radius: 17px;
+    color: #f4f4f5;
+    background: #27272a;
+    font: inherit;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        transform 0.1s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.key:hover {
+    background: #323236;
+}
+
+.key:active {
+    transform: scale(0.96);
+}
+
+.key:focus-visible {
+    outline: 2px solid #a5b4fc;
+    outline-offset: 2px;
+}
+
+.utility {
+    color: #d4d4d8;
+    background: #3f3f46;
+}
+
+.utility:hover {
+    background: #52525b;
+}
+
+.operator {
+    color: #c7d2fe;
+    background: #312e81;
+}
+
+.operator:hover {
+    background: #3730a3;
+}
+
+.equals {
+    color: #fff;
+    background: #4f46e5;
+}
+
+.equals:hover {
+    background: #6366f1;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.keyboard-hint {
+    margin: 14px 0 2px;
+    color: #52525b;
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 420px) {
+    body {
+        padding: 14px;
+    }
+
+    .calculator {
+        padding: 14px;
+        border-radius: 24px;
+    }
+
+    .key {
+        height: 62px;
+        border-radius: 15px;
+    }
+
+    .display {
+        min-height: 130px;
+    }
+}
