@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional responsive image gallery with categories, search, favorites and lightbox navigation.">
+    <title>Frame — Visual Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="#" class="logo">FRAME<span>.</span></a>
+
+        <nav class="main-nav">
+            <a href="#gallery">Collection</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="header-action" id="favoritesButton">
+            <span>Favorites</span>
+            <strong id="favoriteCount">0</strong>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="overline">Independent visual archive</p>
+                <h1>Images with a<br><em>point of view.</em></h1>
+                <p class="hero-text">A curated collection of photography, places and visual stories from around the world.</p>
+            </div>
+
+            <div class="hero-meta">
+                <span>12 works</span>
+                <span>2026 edition</span>
+            </div>
+        </section>
+
+        <section class="toolbar" id="gallery">
+            <div class="category-list">
+                <button class="category active" data-filter="all">All works</button>
+                <button class="category" data-filter="nature">Nature</button>
+                <button class="category" data-filter="architecture">Architecture</button>
+                <button class="category" data-filter="travel">Travel</button>
+                <button class="category" data-filter="people">People</button>
+            </div>
+
+            <label class="search">
+                <span>⌕</span>
+                <input id="searchInput" type="search" placeholder="Search collection" aria-label="Search collection">
+            </label>
+        </section>
+
+        <section class="gallery" id="galleryGrid">
+            <article class="work featured" data-category="nature" data-title="Northern light" data-index="0">
+                <button class="image-button" aria-label="Open Northern light">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=88" alt="Snow covered mountain range">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div>
+                        <span class="number">01</span>
+                        <h2>Northern light</h2>
+                    </div>
+                    <div class="work-tags"><span>Nature</span><span>Alps</span></div>
+                    <button class="favorite" aria-label="Add Northern light to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="architecture" data-title="Concrete rhythm" data-index="1">
+                <button class="image-button" aria-label="Open Concrete rhythm">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=88" alt="Geometric modern building">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">02</span><h2>Concrete rhythm</h2></div>
+                    <div class="work-tags"><span>Architecture</span></div>
+                    <button class="favorite" aria-label="Add Concrete rhythm to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="travel" data-title="Blue horizon" data-index="2">
+                <button class="image-button" aria-label="Open Blue horizon">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=88" alt="Blue ocean and tropical beach">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">03</span><h2>Blue horizon</h2></div>
+                    <div class="work-tags"><span>Travel</span><span>Portugal</span></div>
+                    <button class="favorite" aria-label="Add Blue horizon to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work tall" data-category="people" data-title="Between moments" data-index="3">
+                <button class="image-button" aria-label="Open Between moments">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=88" alt="Portrait of a person outdoors">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">04</span><h2>Between moments</h2></div>
+                    <div class="work-tags"><span>People</span><span>Portrait</span></div>
+                    <button class="favorite" aria-label="Add Between moments to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work wide" data-category="nature" data-title="Still water" data-index="4">
+                <button class="image-button" aria-label="Open Still water">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=88" alt="Mountain lake landscape">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">05</span><h2>Still water</h2></div>
+                    <div class="work-tags"><span>Nature</span><span>Norway</span></div>
+                    <button class="favorite" aria-label="Add Still water to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="architecture" data-title="White volume" data-index="5">
+                <button class="image-button" aria-label="Open White volume">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=88" alt="White modern building">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">06</span><h2>White volume</h2></div>
+                    <div class="work-tags"><span>Architecture</span></div>
+                    <button class="favorite" aria-label="Add White volume to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="travel" data-title="Open road" data-index="6">
+                <button class="image-button" aria-label="Open Open road">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=88" alt="Road beside a mountain lake">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">07</span><h2>Open road</h2></div>
+                    <div class="work-tags"><span>Travel</span><span>Switzerland</span></div>
+                    <button class="favorite" aria-label="Add Open road to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work wide" data-category="people" data-title="Soft focus" data-index="7">
+                <button class="image-button" aria-label="Open Soft focus">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1600&q=88" alt="Portrait in natural light">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">08</span><h2>Soft focus</h2></div>
+                    <div class="work-tags"><span>People</span><span>Portrait</span></div>
+                    <button class="favorite" aria-label="Add Soft focus to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="nature" data-title="Wild field" data-index="8">
+                <button class="image-button" aria-label="Open Wild field">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=88" alt="Open natural landscape">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">09</span><h2>Wild field</h2></div>
+                    <div class="work-tags"><span>Nature</span></div>
+                    <button class="favorite" aria-label="Add Wild field to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work tall" data-category="architecture" data-title="Inside the grid" data-index="9">
+                <button class="image-button" aria-label="Open Inside the grid">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=88" alt="Minimal modern interior">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">10</span><h2>Inside the grid</h2></div>
+                    <div class="work-tags"><span>Architecture</span><span>Interior</span></div>
+                    <button class="favorite" aria-label="Add Inside the grid to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="travel" data-title="Last train home" data-index="10">
+                <button class="image-button" aria-label="Open Last train home">
+                    <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=88" alt="Train traveling through a landscape">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">11</span><h2>Last train home</h2></div>
+                    <div class="work-tags"><span>Travel</span></div>
+                    <button class="favorite" aria-label="Add Last train home to favorites">♡</button>
+                </div>
+            </article>
+
+            <article class="work" data-category="people" data-title="The observer" data-index="11">
+                <button class="image-button" aria-label="Open The observer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=88" alt="Portrait of a person">
+                    <span class="hover-open">View work <b>↗</b></span>
+                </button>
+                <div class="work-details">
+                    <div><span class="number">12</span><h2>The observer</h2></div>
+                    <div class="work-tags"><span>People</span></div>
+                    <button class="favorite" aria-label="Add The observer to favorites">♡</button>
+                </div>
+            </article>
+        </section>
+
+        <div class="empty-state" id="emptyState">
+            <span>No works found</span>
+            <button id="resetSearch">Reset filters</button>
+        </div>
+
+        <section class="about" id="about">
+            <p class="overline">About the archive</p>
+            <div>
+                <h2>A considered collection of visual stories.</h2>
+                <p>Frame is a small digital archive built around images that communicate place, atmosphere and human experience. Browse by category, save the work you like and open any image for a focused view.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeLightbox" aria-label="Close lightbox">×</button>
+
+        <div class="lightbox-main">
+            <button class="lightbox-arrow left" id="previous" aria-label="Previous image">←</button>
+            <img id="lightboxImage" src="" alt="">
+            <button class="lightbox-arrow right" id="next" aria-label="Next image">→</button>
+        </div>
+
+        <div class="lightbox-footer">
+            <div>
+                <span id="lightboxCategory"></span>
+                <h2 id="lightboxTitle"></h2>
+            </div>
+            <span id="lightboxCounter"></span>
+        </div>
+    </div>
+
+    <footer>
+        <span>FRAME. / Visual Archive</span>
+        <span>HTML · CSS · JavaScript</span>
+        <span>© 2026</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
